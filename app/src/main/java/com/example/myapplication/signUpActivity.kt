@@ -42,13 +42,13 @@ class signUpActivity : AppCompatActivity() {
         database.child(user).get().addOnSuccessListener {
             if(it.exists()){
                 val StoredPass=it.child("password").value
-                if(pas.equals(StoredPass)){
+                if(pas == StoredPass){
                     allow=true
                     val sharedPrefUserName = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
                     val editor = sharedPrefUserName.edit()
                     editor.putString("User",user)
                     editor.apply()
-                    startActivity(Intent(this,homeActivity::class.java))
+                    startActivity(Intent(this, homeActivity::class.java))
                     finish()
                     /// Get function is asynchronous , dont change anything here
                      }else{
@@ -59,10 +59,7 @@ class signUpActivity : AppCompatActivity() {
         }.addOnCanceledListener {
             Toast.makeText(this,"Network Error",Toast.LENGTH_SHORT).show()
         }
-        if(allow==true){
-            startActivity(Intent(this,homeActivity::class.java))
-            finish()
-        }else{
+        if (!allow) {
             Email.text.clear()
             Password.text.clear()
         }

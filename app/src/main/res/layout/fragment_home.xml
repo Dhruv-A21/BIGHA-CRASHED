@@ -1,14 +1,315 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    android:id="@+id/drawer"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-</FrameLayout>
+            <LinearLayout
+                android:id="@+id/HomeDiv1"
+                android:layout_width="match_parent"
+                android:layout_height="321dp"
+                android:background="@drawable/img_1"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:ignore="UnknownId">
+
+
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="91dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="'मिट्टी से जन्मा, मिट्टी के लिए बना'"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+                <!-- Add more content to HomeDiv1 if needed -->
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="300dp"
+                android:layout_width="match_parent"
+                android:id="@+id/HomeDiv2"
+                app:layout_constraintTop_toBottomOf="@+id/HomeDiv1"
+                android:background="@drawable/img1"
+                android:orientation="vertical"
+                android:layout_marginTop="-15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/microfinances"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transforming Agriculture Forever"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-condensed" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/MicroFinanceTxt" />
+
+                <!--                //NO VALUE (REMOVABLE) -->
+                <Button
+                    android:id="@+id/btnGoToKN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/go_to_micro_finances"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/LightGrey"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="btnGoToKN"
+                    android:alpha="0.8" />
+                <Button
+                    android:id="@+id/btnKnowMoreMicroFin"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/know_more"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"
+
+                    android:backgroundTint="@color/LightGrey"
+                    android:alpha="0.8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="300dp"
+                android:layout_width="match_parent"
+                android:id="@+id/HomeDiv0"
+                app:layout_constraintTop_toBottomOf="@+id/HomeDiv1"
+                android:background="@drawable/imgmarket"
+                android:orientation="vertical"
+                android:layout_marginTop="-15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:text="Market Place"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No more Middle Men"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-condensed" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/MicroFinanceTxt" />
+
+                <!--                //NO VALUE (REMOVABLE) -->
+                <Button
+                    android:id="@+id/btnGoToMP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Go to Market place"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/LightGrey"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="btnGoToMP"
+                    android:alpha="0.8" />
+                <Button
+                    android:id="@+id/btnKnowMoremarket"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/know_more"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/LightGrey"
+                    android:alpha="0.8" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                app:layout_constraintTop_toBottomOf="@id/HomeDiv2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/imgrent"
+                android:orientation="vertical"
+                android:id="@+id/HomeDiv3"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rent_equipments"
+                    android:layout_gravity="center"
+                    android:textSize="30dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modernizing_farm_equipment_access"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/find_tools_nearby"
+                    android:id="@+id/GoToRent"
+                    android:onClick="RedirectRent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <Button
+                    android:id="@+id/btnKnowMoreRent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/know_more"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintTop_toBottomOf="@+id/HomeDiv3"
+                app:layout_constraintLeft_toLeftOf="@+id/HomeDiv3"
+                android:background="@drawable/img2"
+                android:orientation="vertical"
+                android:id="@+id/HomeDiv4"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disease_detection"
+                    android:layout_gravity="center"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/get_diagnosis_and_cure"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detect_diseases"
+                    android:backgroundTint="@color/LightBlack"
+                    android:layout_marginTop="65dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="RedirectDisease"
+                    android:id="@+id/GoToDisease"
+                    ></Button>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/LightBlack"
+                    android:text="@string/outbreaks_nearby"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="RedirectOutbreaks"
+                    android:id="@+id/GoToOutbreaks">
+                </Button>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/HomeDiv5"
+                app:layout_constraintTop_toBottomOf="@+id/HomeDiv4"
+                app:layout_constraintRight_toLeftOf="parent"
+                android:orientation="vertical"
+                android:background="@drawable/imgtourism">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agrotourism"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="@string/diversify_your_income"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agro_tourism_profile"
+                    android:id="@+id/GoToAgro"
+                    android:onClick="RedirectAgro"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:backgroundTint="@color/alagBlue"
+                    ></Button>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu"
+        android:layout_gravity="start"
+        android:id="@+id/nav_view"
+        tools:ignore="MissingConstraints" />
+</androidx.drawerlayout.widget.DrawerLayout>
